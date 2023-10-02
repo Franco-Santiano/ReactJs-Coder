@@ -1,6 +1,6 @@
 import { PiShoppingCartSimpleBold} from 'react-icons/pi';
 
-const CartWidget = ({className}) =>{
+const CartWidget = () =>{
 
     return(
         <div>
