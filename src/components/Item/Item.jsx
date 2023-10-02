@@ -1,4 +1,4 @@
-import item from "./item.css"
+import "./item.css"
 import ItemCounter from "../ItemCounter/ItemCounter"
 import { Link } from "react-router-dom"
 
