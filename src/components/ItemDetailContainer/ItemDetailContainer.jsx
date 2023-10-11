@@ -22,7 +22,7 @@ export const ItemDetailContainer = ({stock}) => {
 
     return (
         <div className=''>
-            <ItemDetail {...detalle}/>
+            <ItemDetail stock={stock} {...detalle}/>
         </div>
     )
 }

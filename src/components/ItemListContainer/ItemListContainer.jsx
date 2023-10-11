@@ -21,7 +21,7 @@ const ItemListContainer = () =>{
     },[navCategoria])
 
     return(
-        <section className="m-5">
+        <section className="m-5 h-100">
             <ItemList productos={productos}/>
         </section>
     );

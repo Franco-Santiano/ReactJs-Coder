@@ -11,7 +11,7 @@ export const Item =({nombre, imagen, precio, stock,id}) =>{
         <span className="col fs-3"> $ {precio}</span>
         <br />
         <span className="fs-5 d-block mb-3">{stock} Unidades Disponibles</span>
-        <ItemCounter className="m-1" stock ={stock}/>
+        <ItemCounter className="m-1" nombre={nombre} precio={precio} id={id} stock ={stock}/>
         <Link className="detail-button btn w-100 btn-dark position-absolute bottom-0 start-0 d-block" to={`/itemDetailContainer/${id}`}>Ver Mas</Link>
     </div>
     </div>
