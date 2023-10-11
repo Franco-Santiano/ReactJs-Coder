@@ -16,7 +16,7 @@ const ItemCounter =({stock,className, id, nombre, precio}) => {
         number >=1 && setNumber(number-1);
     }
   
-    const onAdd = (cantidad, stock) => {
+    const onAdd = (cantidad) => {
         setCantidad(cantidad)
 
         const producto = {
@@ -36,7 +36,7 @@ const ItemCounter =({stock,className, id, nombre, precio}) => {
         number > 0? <button className={`btn btn-dark ${className}`} onClick={restar}>-</button>:<button className={`btn btn-dark disabled ${className}`} onClick={restar}>-</button>
         }
         <br/>
-        {number === 0? <button className={`btn btn-dark disabled ${className}`} onClick={()=> onAdd(number)} >Agregar Al Carrito</button>:<button className={`btn btn-dark  ${className}`} onClick={()=> onAdd(number)} >Agregar Al Carrito</button>}
+        {number === 0? <button className={`btn btn-dark disabled ${className}`} onClick={()=> onAdd(cantidad)} >Agregar Al Carrito</button>:<button className={`btn btn-dark  ${className}`} onClick={()=> onAdd(number)} >Agregar Al Carrito</button>}
         { number === 0 ? <Link to={'/cart'}  className="btn btn-dark disabled">Comprar</Link>:<Link to={'/cart'}  className="btn btn-dark ">Comprar</Link> }
         </>
     )
