@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Esta aplicacion fue creada con Create React App [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Scripts
 
-## Available Scripts
+Dentro del directo del proyecto, puedes ejecutar:
 
-In the project directory, you can run:
+### `npm install`
+
+Ejecuta este comando para instalar las librerias dependientes para el funcionamiento de la App
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicacion en modo Desarrollador.
+Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La pagina recargara cuando tu hagas cambios.
+Tambien puedes ver lint errores en la consola.
 
-### `npm test`
+Para desarrollar las funcionalidades necesarias para el proyecto de una aplicacion de tipo e-Commerce se realizaron componentes tanto de presentacion (NavBar, Item, entre otros), como asi tambien, componentes contenedores (ItemList, ItemDetail, Checkout, CartItem, etc).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Navbar (dentro de la carpeta NavBar)
 
-### `npm run build`
+Componente utilizado para contener los links pertinentes a la navegación dentro de la app, junto con el logo e icono del carrito.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# CartWidget (dentro de la carpeta CartWidget)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Componente del ícono del carrito de compras con la navegacion correspondiente hacia el listado del carrito.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Item (dentro de la carpeta Item)
 
-### `npm run eject`
+Componente de presentacion de los productos dentro de la lista de los mismos.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# ItemList (dentro de la carpeta ItemList)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Componente encargado de realizar el mapeo de los items con las props correspondientes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# ItemListContainer (dentro de la carpeta ItemListContainer)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Componente contenedor encargado de obtener la informacion de los productos desde la base de datos para luego transmitirlos al itemList.
 
-## Learn More
+# ItemDetailContainer (dentro de la carpeta ItemDetailContainer)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Componente contenedor encargado de obtener la informacion de un producto especifico desde la base de datos para luego transmitirlo al ItemDetail.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# ItemDetail (dentro de la carpeta ItemDetail)
 
-### Code Splitting
+Componente de presentacion con los estilos y propiedades necesarias para tomar la información que envía ItemDetailContainer y mostrar el detalle del producto seleccionado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# ItemCount (dentro de la carpeta ItemCount)
 
-### Analyzing the Bundle Size
+Componente para agregar o quitar n productos al carrito desde la sección de detalles del producto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Cart (dentro de la carpeta Cart)
 
-### Making a Progressive Web App
+Componente para generar el carrito de compras recibiendo la información que genera CartContext.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Checkout (dentro de la carpeta Checkout)
 
-### Advanced Configuration
+Componente para generar el paso final del proceso de compras, donde el cliente ingresa sus datos y realiza el pago.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# CartContext (dentro de la carpeta contex)
 
-### Deployment
+Componente con toda la logica pertinente al carrito que se utiliza para transmitir informacion y estados como asi tambien los cambios de los mismos entre distintos componentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Librerias externas usadas:
 
-### `npm run build` fails to minify
+# React-Hook-Form:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Utilizada para aumentar la eficiencia y eficacia a la hora de desarrollar formularios ya que posee una facil implementacion de autenticacion de los mismos como validacion.
