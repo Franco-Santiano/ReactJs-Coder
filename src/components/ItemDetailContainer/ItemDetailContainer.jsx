@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
-import { obtenerProductosId } from '../../mock/productos';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
-
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../Services/Firebase/config';
 
 
 export const ItemDetailContainer = ({stock}) => {
@@ -11,13 +11,13 @@ export const ItemDetailContainer = ({stock}) => {
     const navId = useParams().id;
 
     useEffect(()=>{
-        obtenerProductosId(Number(navId))
-        .then(response =>{
-            setDetalle(response)
-        })
-        .catch(error =>{
-            console.error(error)
-        })
+        const productoUnico = doc(db, "productos", navId);
+        getDoc(productoUnico)
+        .then((snapshot)=>{
+            setDetalle({
+                ...snapshot.data(), id: snapshot.id
+            });
+            });
     },[navId]);
 
     return (

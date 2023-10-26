@@ -32,7 +32,7 @@ const NavBar = (props) => {
             <Link className="nav-link disabled" to={"/arrivals"}>Arrivals!</Link>
             </li>
         </ul>
-        <CartWidget/>
+        <Link to={'/cart'} className='nav-link'><CartWidget/></Link>
         </div>
     </div>
     </nav>

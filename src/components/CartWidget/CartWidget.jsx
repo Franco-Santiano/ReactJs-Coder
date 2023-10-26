@@ -4,12 +4,13 @@ import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () =>{
 
-    const {carrito} = useContext(CartContext)
+    const {cartQuantity} = useContext(CartContext)
+
 
     return(
         <div>
         <PiShoppingCartSimpleBold fill='white' fontSize="2rem"/>
-        <span className="badge text-bg-light">{carrito.reduce((acc,p)=>{return acc + p.cantidad},0)}</span>
+        {cartQuantity() > 0 && <span className="badge text-bg-light">{cartQuantity()}</span>}
         </div>
         );
 };
